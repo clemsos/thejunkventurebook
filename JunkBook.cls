@@ -52,11 +52,6 @@
 \RequirePackage{colortbl}
 \RequirePackage{longtable}
 
-% francisation
-\renewcommand\listalgorithmname{Liste des algorithmes} 
-\addto\captionsfrench{\def\figurename{Graphique}} % francisation des légendes
-\addto\captionsfrench{\def\tablename{Tableau}}
-
 % colors
 \RequirePackage{color}
 \definecolor{Crimson}{rgb}{0.6471, 0.1098, 0.1882}
@@ -64,7 +59,7 @@
 \definecolor{linkgrey}{gray}{0.5}
 
 % page layout
-\RequirePackage[a4paper, margin=2.5cm]{geometry} % cus­tomize page lay­out
+\RequirePackage[b5paper, margin=2.5cm]{geometry} % cus­tomize page lay­out
 \RequirePackage{fancyhdr}  % header and footer
 \RequirePackage{booktabs} % for much better looking tables
 \RequirePackage[palatino]{quotchap} % dec­o­ra­tive chap­ter head­ings with quo­ta­tions
@@ -110,7 +105,6 @@
 \renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{3.3em}}
 
 % add a blank page
-
 \newcommand*\blankpage{\newpage\null\thispagestyle{empty}\newpage}
 
 % some definitions
@@ -125,6 +119,7 @@
 \def\university#1{\gdef\@university{#1}}
 \def\universitycity#1{\gdef\@universitycity{#1}}
 \def\universitystate#1{\gdef\@universitystate{#1}}
+
 
 % Licensing CC
 \newcommand{\copyrightpage}{
