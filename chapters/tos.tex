@@ -1,0 +1,45 @@
+\section{Terms Of Services}
+
+\# Markmix: train markov generator with an heteroclit set of Terms of
+Services :\newline
+\# Random Website Terms of Conditions from ...\newline
+\# Divorce Agreement from ...\newline
+\# Mez Breeze ToSS on-line artwork\newline
+\# Github Terms of Services\newline
+\# Taobao Terms of Services\newline
+\# \& see what comes out !\newline
+\newline
+import markov\newline
+\newline
+website = open({\textquotedbl}sampleConditions.txt{\textquotedbl},
+{\textquotedbl}r{\textquotedbl})\newline
+divorce = open({\textquotedbl}sampleDivorce.txt{\textquotedbl},
+{\textquotedbl}r{\textquotedbl})\newline
+mez = open({\textquotedbl}sampleMez.txt{\textquotedbl},
+{\textquotedbl}r{\textquotedbl})\newline
+github = open({\textquotedbl}sampleGithub.txt{\textquotedbl},
+{\textquotedbl}r{\textquotedbl})\newline
+taobao = open({\textquotedbl}sampleTaobao.txt{\textquotedbl},
+{\textquotedbl}r{\textquotedbl})\newline
+o = open({\textquotedbl}markmix-tos.txt{\textquotedbl},
+{\textquotedbl}w{\textquotedbl})\newline
+\newline
+class Chunk():\newline
+~~~ def \_\_init\_\_(self, txtfile):\newline
+~~~~~~~ self.text = txtfile.read()\newline
+\newline
+c1 = Chunk(website)\newline
+c2 = Chunk(divorce)\newline
+c3 = Chunk(mez)\newline
+c4 = Chunk(github)\newline
+c5 = Chunk(taobao)\newline
+chunks = [c1, c2, c3, c4, c5]\newline
+\newline
+markmixer = markov.Markov(chunks)\newline
+\newline
+out = markmixer.generate\_markov\_text()\newline
+\newline
+o.write(out)\newline
+o.close()
+
+~
