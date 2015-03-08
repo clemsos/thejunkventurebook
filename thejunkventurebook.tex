@@ -19,7 +19,7 @@
 \blankpage
 \copyrightpage
 
-\blankpage
+% \blankpage
 % \titlelight
 
 \blankpage
@@ -33,31 +33,33 @@
 \addcontentsline{toc}{section}{Table of Junk}
 
 \include{chapters/about}
+\include{chapters/abstract}
 % \addcontentsline{toc}{chapter}{\protect\numberline{}Introduction}
 
 \mainmatter % the main course
+\chapter{Junkware : the grotesque theater of innovation}
+\include{chapters/junkware} % Anatomy of the workshop
 
-\chapter{CHAPTER ONE}
-\include{chapters/workshop} % Anatomy of the workshop
-\include{chapters/gabriele} % *digital*media*junk*ware*lore*
-\include{chapters/catherine} % Data-Literature
-\include{chapters/merryl} % Junk - Prod
-\include{chapters/julien} % Board/Bored Games
-\include{chapters/yuan} % Third Hand
+\chapter{Workshop}
+\include{chapters/workshop/workshop} % Anatomy of the workshop
+\include{chapters/workshop/gabriele} % *digital*media*junk*ware*lore*
+\include{chapters/workshop/catherine} % Data-Literature
+\include{chapters/workshop/merryl} % Junk - Prod
+\include{chapters/workshop/julien} % Board/Bored Games
+\include{chapters/workshop/yuan} % Third Hand
 
-\chapter{CHAPTER TWO}
-\include{chapters/tos} % markov algorithm
-\includepdf[pages={1}]{chapters/Junkware-ToSform.pdf} % Junkware Terms Of Services
-
-\include{chapters/mecenat} % Writing Machine
-\include{chapters/latin} % Where Latin is very usefull...
-\include{chapters/genome} % The $1000 Genome
-\include{chapters/objectsbehavior} % Weird Object Behaviors
-\include{chapters/characteristics} % Characteristics
-% \include{chapters/feelings} % Feelings.txt
-\include{chapters/checkpoint} % Daily Life at the Checkpoint
-\include{chapters/should} % Should
-\include{chapters/checklist} % Check-list
+\chapter{Trifles}
+\include{chapters/trifles/tos} % markov algorithm
+\includepdf[pages={1}]{chapters/trifles/Junkware-ToSform.pdf} % Junkware Terms Of Services
+\include{chapters/trifles/mecenat} % Writing Machine
+\include{chapters/trifles/latin} % Where Latin is very usefull...
+\include{chapters/trifles/genome} % The $1000 Genome
+\include{chapters/trifles/objectsbehavior} % Weird Object Behaviors
+\include{chapters/trifles/characteristics} % Characteristics
+% \include{trifles/chapters/feelings} % Feelings.txt
+\include{chapters/trifles/checkpoint} % Daily Life at the Checkpoint
+\include{chapters/trifles/should} % Should
+\include{chapters/trifles/checklist} % Check-list
 
 \backmatter  % ADDITIONAL JUNK
 % \include{chapters/} % Glossary
@@ -66,5 +68,10 @@
 
 \tableofcontents
 \addcontentsline{toc}{chapter}{Table des Matières}
+
+% Bibliography
+% \bibliographystyle{acmsiggraph}
+\nocite{*}
+\bibliography{junkware}
 
 \end{document}
